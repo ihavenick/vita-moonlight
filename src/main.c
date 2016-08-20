@@ -113,6 +113,18 @@ static void vita_process_input(void) {
     BTN(SCE_CTRL_CIRCLE, B_FLAG);
     BTN(SCE_CTRL_CROSS, A_FLAG);
     BTN(SCE_CTRL_SQUARE, X_FLAG);
+    
+    
+    //Back Touch-Screen support test
+    //sceTouchPeek(SCE_TOUCH_PORT_BACK, &touch, 1);
+    //    if (touch.reportNum > 0) {
+    //        bxTouch = (lerp(touch.report[0].x, 1919, 960) - 50);
+    //        byTouch = (lerp(touch.report[0].y, 1087, 544) - 56);
+    //        if(bxTouch <  480 && )
+    //    }
+    BTN(SCE_TOUCH_PORT_BACK, R2B_FLAG);
+    
+    
 
     LiSendControllerEvent(btn, 0, 0, a2m(pad.lx), -a2m(pad.ly), a2m(pad.rx), -a2m(pad.ry));
 
